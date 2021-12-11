@@ -1,11 +1,11 @@
-
 type Query {
   books: [Book!]!
 }
+type Mutation {
+  books: [Book!]!
+}
 type Book {
-  name: String,
+  name: String
   desciption: String
   price: String
 }
-
-

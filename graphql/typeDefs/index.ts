@@ -2,19 +2,16 @@ const path = require('path');
 const fs = require('fs');
 const glob = require('fast-glob');
 
-let arr: any[] = [];
+let typeDefs: string[] = [];
 const pathfiles = 'graphql/typeDefs/types/*.gql';
 
 glob.sync(pathfiles).forEach(function (file: any) {
   try {
     const data = fs.readFileSync(path.resolve(file), 'utf8');
-
-    arr.push(data);
+    typeDefs.push(data);
   } catch (err) {
-    console.error(err);
+    // console.error(err);
   }
 });
 
-export default arr;
-
-//module.exports = mergeTypeDefs(typesArray);
+export default typeDefs;

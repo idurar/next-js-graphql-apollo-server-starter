@@ -8,11 +8,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@graphql-tools/graphql-file-loader": "^7.3.3",
-    "@graphql-tools/load": "^7.4.1",
-    "@graphql-tools/load-files": "^6.5.2",
-    "@graphql-tools/merge": "^8.2.1",
-    "@graphql-tools/schema": "^8.3.1",
     "apollo-server-micro": "^3.5.0",
     "axios": "^0.24.0",
     "fast-glob": "^3.2.7",
