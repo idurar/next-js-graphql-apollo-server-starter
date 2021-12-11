@@ -1,0 +1,8 @@
+
+module.exports = {
+  Query: {
+    users(parent: any, args: any, context: any) {
+      return [{ name: 'Nextjs' }];
+    },
+  },
+};
