@@ -3,7 +3,7 @@ const fs = require('fs');
 const glob = require('fast-glob');
 
 let typeDefs: string[] = [];
-const pathfiles = 'graphql/typeDefs/types/*.gql';
+const pathfiles = 'graphql/typeDefs/*.gql';
 
 glob.sync(pathfiles).forEach(function (file: any) {
   try {
