@@ -1,9 +1,3 @@
-type Query {
-  users: [User!]!
-}
-type Mutation {
-  users: [User!]!
-}
 type User {
   name: String
 }
