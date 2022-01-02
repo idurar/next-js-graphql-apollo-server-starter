@@ -1,4 +1,9 @@
-import Query from './query';
-import Mutation from './mutation';
+import { combineResolvers } from '@/graphql/utils';
 
-export default { Query, Mutation };
+import propriety from './propriety';
+import user from './user';
+import review from './review';
+
+const resolversList = [propriety, user, review];
+
+export default combineResolvers(resolversList);

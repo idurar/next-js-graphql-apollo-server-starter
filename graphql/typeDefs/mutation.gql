@@ -1,4 +1,0 @@
-type Mutation {
-  books: [Book!]!
-  users: [User!]!
-}

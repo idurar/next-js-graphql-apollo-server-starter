@@ -1,4 +1,0 @@
-type Query {
-  books: [Book!]!
-  users: [User!]!
-}
