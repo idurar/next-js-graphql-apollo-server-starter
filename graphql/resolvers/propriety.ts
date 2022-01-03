@@ -1,3 +1,5 @@
+import { resolverType } from 'fast-graphql';
+
 const Query = {
   proprietyList: () => {
     return [{ title: 'Nextjs' }];
@@ -14,4 +16,6 @@ const Mutation = {
   },
 };
 
-export default { Query, Mutation };
+const resolver: resolverType = { Query, Mutation };
+
+export default resolver;

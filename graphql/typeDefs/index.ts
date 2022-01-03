@@ -1,4 +1,4 @@
-import { mergeSchemas } from '@/graphql/utils';
+import { mergeSchemas } from 'fast-graphql';
 
 const mergedSchemas = mergeSchemas('graphql/typeDefs/*.gql');
 
