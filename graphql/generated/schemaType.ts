@@ -12,11 +12,20 @@ export type Scalars = {
   Float: number;
 };
 
+export type Book = {
+  __typename?: 'Book';
+  desciption?: Maybe<Scalars['String']>;
+  name: Scalars['String'];
+  price?: Maybe<Scalars['String']>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPropriety?: Maybe<Propriety>;
   addReview?: Maybe<Review>;
   addUser: User;
+  books: Array<Book>;
+  users: Array<User>;
 };
 
 
@@ -49,11 +58,13 @@ export type Propriety = {
 
 export type Query = {
   __typename?: 'Query';
+  books: Array<Book>;
   propriety?: Maybe<Propriety>;
   proprietyList?: Maybe<Array<Maybe<Propriety>>>;
   reviewByUser?: Maybe<Array<Maybe<Review>>>;
   user: User;
   userList: Array<User>;
+  users: Array<User>;
 };
 
 

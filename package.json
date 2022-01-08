@@ -1,6 +1,12 @@
 {
   "name": "next-js-graphql-starter",
   "private": false,
+  "description": "Starter Next.js with appollo server auto generetated schemq",
+  "keywords": [
+    "graphql,tools,schema,merge,combine,resolvers,fast,simple,starter,nextjs,typescript"
+  ],
+  "author": "Salah Eddine Lalami",
+  "license": "MIT",
   "scripts": {
     "dev": "yarn generate && next dev",
     "build": "next build",
@@ -13,7 +19,6 @@
     "@graphql-codegen/cli": "^2.3.1",
     "@graphql-codegen/typescript": "^2.4.2",
     "apollo-server-micro": "^3.5.0",
-    "axios": "^0.24.0",
     "fast-graphql": "^1.0.3",
     "graphql": "^16.1.0",
     "micro": "^9.3.4",

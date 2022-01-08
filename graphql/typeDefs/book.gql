@@ -1,5 +1,0 @@
-type Book {
-  name: String!
-  desciption: String
-  price: String
-}

@@ -1,4 +1,13 @@
-type Propriety {
+type Book {
+  name: String!
+  desciption: String
+  price: String
+}
+ type Mutation {
+  books: [Book!]!
+  users: [User!]!
+}
+ type Propriety {
   id: ID
   owner: User
   type: String
@@ -26,6 +35,10 @@ type Mutation {
 type Query {
   proprietyList: [Propriety]
   propriety(id: ID): Propriety
+}
+ type Query {
+  books: [Book!]!
+  users: [User!]!
 }
  type Review {
   id: ID
