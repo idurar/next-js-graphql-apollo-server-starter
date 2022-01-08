@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>here main page</h1>
+        <h1>updated main page</h1>
       </main>
 
       <footer className={styles.footer}>

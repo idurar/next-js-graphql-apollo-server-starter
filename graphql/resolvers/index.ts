@@ -1,4 +1,12 @@
-import Query from './query';
-import Mutation from './mutation';
+import { combineResolvers, resolverType } from 'fast-graphql';
 
-export default { Query, Mutation };
+import propriety from './propriety';
+import user from './user';
+import review from './review';
+
+const resolversList: resolverType[] = [propriety, user, review];
+
+const cominedResolvers = combineResolvers(resolversList);
+
+export default cominedResolvers;
+

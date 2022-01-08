@@ -154,9 +154,22 @@ const mushrooms: MushroomType[] = [
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<{ success: boolean; result: MushroomType[] }>,
+  res: NextApiResponse<{
+    success: boolean;
+    result: MushroomType[] | null;
+    error?: unknown;
+  }>,
 ) {
-  setTimeout(() => {
-    res.status(200).json({ success: true, result: mushrooms });
-  }, 1000);
+  return new Promise<void>((resolve, reject) => {
+    try {
+      setTimeout(() => {
+        res.status(200).json({ success: true, result: mushrooms });
+        resolve();
+      }, 1000);
+    } catch (error: unknown) {
+      res.status(503).json({ success: false, result: null, error });
+
+      reject();
+    }
+  });
 }
