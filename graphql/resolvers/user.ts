@@ -1,12 +1,14 @@
 import { resolverType } from 'fast-graphql';
 
+import * as schemaType from '@/graphql/generated/schemaType';
+
 const Query = {
-  userList: () => {
-    return [{ name: 'Nextjs' }];
+  userList: (): schemaType.Query['userList'] => {
+    return [{ email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' }];
   },
 
-  user: (id: any) => {
-    return { name: 'Nextjs' };
+  user: (id: schemaType.User['id']): schemaType.Query['user'] => {
+    return { email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' };
   },
 };
 

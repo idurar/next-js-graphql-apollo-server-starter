@@ -1,0 +1,71 @@
+type Propriety {
+  id: ID
+  owner: User
+  type: String
+  title: String
+  desciption: String
+  mainPhoto: String
+  photos: [String]
+  priceByNight: Float
+  reviews: [Review]
+}
+
+input inputProprietyType {
+  type: String
+  title: String
+  desciption: String
+  mainPhoto: String
+  photos: [String]
+  priceByNight: Float
+}
+
+type Mutation {
+  addPropriety(body: inputProprietyType): Propriety
+}
+
+type Query {
+  proprietyList: [Propriety]
+  propriety(id: ID): Propriety
+}
+ type Review {
+  id: ID
+  author: User
+  feedback: String
+  rate: Float
+  propriety: Propriety
+}
+
+type Query {
+  reviewByUser(id: ID): [Review]
+}
+
+input inputReviewType {
+  authorId: ID
+  feedback: String
+  rate: Float
+  proprietyId: ID
+}
+
+type Mutation {
+  addReview(body: inputReviewType): Review
+}
+ type User {
+  id: ID!
+  name: String
+  email: String!
+  photo: String!
+}
+
+input inputUserType {
+  name: String!
+  email: String!
+}
+
+type Query {
+  userList: [User!]!
+  user(id: ID!): User!
+}
+
+type Mutation {
+  addUser(body: inputUserType): User!
+}

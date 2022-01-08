@@ -2,7 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { ApolloServer } from 'apollo-server-micro';
 
 import typeDefs from '@/graphql/typeDefs';
+
 import resolvers from '@/graphql/resolvers';
+
+console.log('🚀 ~ file: graphql.ts ~ line 5 ~ typeDefs');
 
 const apolloServer = new ApolloServer({
   typeDefs,
@@ -37,5 +40,8 @@ export default async function handler(
 export const config = {
   api: {
     bodyParser: false,
+  },
+  service: {
+    localSchemaFile: './schema/schema.graphql',
   },
 };

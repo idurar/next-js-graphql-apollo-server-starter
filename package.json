@@ -2,12 +2,16 @@
   "name": "start-nextjs-antd",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn generate && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate": "yarn schema && graphql-codegen --config codegen.yml",
+    "schema": "node ./scripts/generateSchema"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.3.1",
+    "@graphql-codegen/typescript": "^2.4.2",
     "apollo-server-micro": "^3.5.0",
     "axios": "^0.24.0",
     "fast-graphql": "^1.0.3",

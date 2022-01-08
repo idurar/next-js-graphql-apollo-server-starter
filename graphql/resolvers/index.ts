@@ -6,4 +6,6 @@ import review from './review';
 
 const resolversList: resolverType[] = [propriety, user, review];
 
-export default combineResolvers(resolversList);
+const cominedResolvers = combineResolvers(resolversList);
+
+export default cominedResolvers;
