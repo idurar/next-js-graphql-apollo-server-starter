@@ -1,6 +1,6 @@
 {
-  "name": "start-nextjs-antd",
-  "private": true,
+  "name": "next-js-graphql-starter",
+  "private": false,
   "scripts": {
     "dev": "yarn generate && next dev",
     "build": "next build",
