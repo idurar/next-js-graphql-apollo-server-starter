@@ -41,7 +41,4 @@ export const config = {
   api: {
     bodyParser: false,
   },
-  service: {
-    localSchemaFile: './schema/schema.graphql',
-  },
 };
