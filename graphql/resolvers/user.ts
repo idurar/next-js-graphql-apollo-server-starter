@@ -7,7 +7,13 @@ const Query = {
     return [{ email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' }];
   },
 
-  user: (id: schemaType.User['id']): schemaType.Query['user'] => {
+  user: (
+    _parent: any,
+    _args: schemaType.QueryUserArgs,
+    _context: any
+  ): schemaType.Query['user'] => {
+    const { id } = _args;
+    console.log('🚀 ~ file: user.ts ~ line 17 ~ id', id);
     return { email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' };
   },
 };

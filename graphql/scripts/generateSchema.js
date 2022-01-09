@@ -5,7 +5,7 @@ const mergedSchemas = mergeSchemas('graphql/typeDefs/*.gql');
 
 const schema = mergedSchemas.join(' ');
 
-fs.writeFile('./schema.graphql', schema, (err) => {
+fs.writeFile('./graphql/schema.graphql', schema, (err) => {
   if (err) {
     console.error(err);
     return;
