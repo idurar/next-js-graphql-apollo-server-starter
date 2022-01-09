@@ -19,16 +19,13 @@ export type Mutation = {
   addUser: User;
 };
 
-
 export type MutationAddProprietyArgs = {
   body?: InputMaybe<InputProprietyType>;
 };
 
-
 export type MutationAddReviewArgs = {
   body?: InputMaybe<InputReviewType>;
 };
-
 
 export type MutationAddUserArgs = {
   body?: InputMaybe<InputUserType>;
@@ -56,16 +53,13 @@ export type Query = {
   userList: Array<User>;
 };
 
-
 export type QueryProprietyArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
 
-
 export type QueryReviewByUserArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryUserArgs = {
   id: Scalars['ID'];

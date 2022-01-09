@@ -7,21 +7,17 @@ const Query = {
     return [{ email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' }];
   },
 
-  user: (
-    _parent: any,
-    _args: schemaType.QueryUserArgs,
-    _context: any
-  ): schemaType.Query['user'] => {
-    const { id } = _args;
+  user: (parent: any, args: any, ctx: any): schemaType.Query['user'] => {
+    const { id } = args;
     console.log('🚀 ~ file: user.ts ~ line 17 ~ id', id);
     return { email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' };
-  },
+  }
 };
 
 const Mutation = {
   addUser: (body: any) => {
     return { name: 'this is addUser mutuation' };
-  },
+  }
 };
 
 const resolver: resolverType = { Query, Mutation };
