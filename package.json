@@ -13,7 +13,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate": "yarn schema && graphql-codegen --config codegen.yml",
-    "schema": "node ./scripts/generateSchema"
+    "schema": "node ./graphql/scripts/generateSchema"
   },
   "dependencies": {
     "@graphql-codegen/cli": "^2.3.1",
