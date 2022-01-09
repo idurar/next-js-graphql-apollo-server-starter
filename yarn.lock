@@ -3000,6 +3000,7 @@ fast-graphql@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fast-graphql/-/fast-graphql-1.1.0.tgz#72a3977ab543a43e0df209b3bfcaeb8229334b7e"
   integrity sha512-gS6WLQjHsIhdwcK2bAVocRav9LfWlMGsgcQ0cMmuGsG4KbAFQDgQZbvKpIyWEVn3kEtTTHZzgY0uh4biUZyr9Q==
+
   dependencies:
     fast-glob "^3.2.7"
 

@@ -21,6 +21,7 @@ export default async function graphqlServer({
   req: NextApiRequest;
   res: NextApiResponse;
   serverConfig?: any;
+
 }) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
