@@ -27,7 +27,7 @@ type Query {
   proprietyList: [Propriety]
   propriety(id: ID): Propriety
 }
- type Review {
+type Review {
   id: ID
   author: User
   feedback: String
@@ -49,7 +49,7 @@ input inputReviewType {
 type Mutation {
   addReview(body: inputReviewType): Review
 }
- type User {
+type User {
   id: ID!
   name: String
   email: String!

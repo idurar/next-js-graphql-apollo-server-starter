@@ -9,4 +9,3 @@ const resolversList: resolverType[] = [propriety, user, review];
 const cominedResolvers = combineResolvers(resolversList);
 
 export default cominedResolvers;
-

@@ -15,13 +15,13 @@ const Query = {
     const { id } = _args;
     console.log('🚀 ~ file: user.ts ~ line 17 ~ id', id);
     return { email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' };
-  },
+  }
 };
 
 const Mutation = {
   addUser: (body: any) => {
     return { name: 'this is addUser mutuation' };
-  },
+  }
 };
 
 const resolver: resolverType = { Query, Mutation };

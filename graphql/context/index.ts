@@ -9,6 +9,6 @@ export type Context = {
 export function createContext({}) {
   //   const session = await getSession({ req }); // TODO: credentials not working on graphql studio (/api/graphql)
   return {
-    session: { isAuth: true },
+    session: { isAuth: true }
   };
 }
