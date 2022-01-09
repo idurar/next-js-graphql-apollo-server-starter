@@ -4,9 +4,8 @@ import propriety from './propriety';
 import user from './user';
 import review from './review';
 
-const resolversList: resolverType[] = [propriety, user, review];
+const resolvers: resolverType[] = [propriety, user, review];
 
-const cominedResolvers = combineResolvers(resolversList);
+const cominedResolvers = combineResolvers({ resolvers });
 
 export default cominedResolvers;
-

@@ -1,15 +1,7 @@
-const fs = require('fs');
-const { mergeSchemas } = require('fast-graphql');
 
-const mergedSchemas = mergeSchemas('graphql/typeDefs/*.gql');
+const { generateSchema } = require('fast-graphql');
 
-const schema = mergedSchemas.join(' ');
+const inputPath = './graphql/typeDefs/*.gql';
+const outPath = './graphql/schema.graphql';
 
-fs.writeFile('./graphql/schema.graphql', schema, (err) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-});
-
-console.log('  ✔ Schema Generated : schema.graphql');
+generateSchema({ inputPath, outPath });
