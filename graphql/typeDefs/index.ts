@@ -1,6 +1,7 @@
 import { mergeSchemas } from 'fast-graphql';
 
-const mergedSchemas = mergeSchemas('graphql/typeDefs/*.gql');
+const pathfiles = './graphql/typeDefs/*.gql';
+
+const mergedSchemas = mergeSchemas({ pathfiles });
 
 export default mergedSchemas;
-
