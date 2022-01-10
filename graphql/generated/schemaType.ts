@@ -14,25 +14,28 @@ export type Scalars = {
 
 export type Mutation = {
   __typename?: 'Mutation';
-  addPropriety?: Maybe<Propriety>;
+  addPlace?: Maybe<Place>;
   addReview?: Maybe<Review>;
   addUser: User;
 };
 
-export type MutationAddProprietyArgs = {
-  body?: InputMaybe<InputProprietyType>;
+
+export type MutationAddPlaceArgs = {
+  body?: InputMaybe<InputPlaceType>;
 };
+
 
 export type MutationAddReviewArgs = {
   body?: InputMaybe<InputReviewType>;
 };
 
+
 export type MutationAddUserArgs = {
   body?: InputMaybe<InputUserType>;
 };
 
-export type Propriety = {
-  __typename?: 'Propriety';
+export type Place = {
+  __typename?: 'Place';
   desciption?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['ID']>;
   mainPhoto?: Maybe<Scalars['String']>;
@@ -41,25 +44,27 @@ export type Propriety = {
   priceByNight?: Maybe<Scalars['Float']>;
   reviews?: Maybe<Array<Maybe<Review>>>;
   title?: Maybe<Scalars['String']>;
-  type?: Maybe<Scalars['String']>;
 };
 
 export type Query = {
   __typename?: 'Query';
-  propriety?: Maybe<Propriety>;
-  proprietyList?: Maybe<Array<Maybe<Propriety>>>;
+  place?: Maybe<Place>;
+  placeList?: Maybe<Array<Maybe<Place>>>;
   reviewByUser?: Maybe<Array<Maybe<Review>>>;
   user: User;
   userList: Array<User>;
 };
 
-export type QueryProprietyArgs = {
+
+export type QueryPlaceArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
+
 
 export type QueryReviewByUserArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
+
 
 export type QueryUserArgs = {
   id: Scalars['ID'];
@@ -70,7 +75,7 @@ export type Review = {
   author?: Maybe<User>;
   feedback?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['ID']>;
-  propriety?: Maybe<Propriety>;
+  place?: Maybe<Scalars['ID']>;
   rate?: Maybe<Scalars['Float']>;
 };
 
@@ -82,7 +87,7 @@ export type User = {
   photo: Scalars['String'];
 };
 
-export type InputProprietyType = {
+export type InputPlaceType = {
   desciption?: InputMaybe<Scalars['String']>;
   mainPhoto?: InputMaybe<Scalars['String']>;
   photos?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
@@ -92,9 +97,9 @@ export type InputProprietyType = {
 };
 
 export type InputReviewType = {
-  authorId?: InputMaybe<Scalars['ID']>;
   feedback?: InputMaybe<Scalars['String']>;
-  proprietyId?: InputMaybe<Scalars['ID']>;
+  id?: InputMaybe<Scalars['ID']>;
+  place?: InputMaybe<Scalars['ID']>;
   rate?: InputMaybe<Scalars['Float']>;
 };
 

@@ -1,35 +1,11 @@
 import type { NextPage } from 'next';
 
-import { useEffect } from 'react';
-import axios from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
-import { MushroomType } from '@/types/mushroom';
-import useOnFetch, { promiseReuslt } from '@/hooks/useOnFetch';
-
 const Home: NextPage = () => {
-  async function fetchMyAPI(): Promise<promiseReuslt<MushroomType[]>> {
-    try {
-      const { data } = await axios.get('/api/mushroom');
-
-      return data;
-    } catch (error) {
-      return { result: null, success: false };
-    }
-  }
-  const { onFetch, result, isSuccess, isLoading } =
-    useOnFetch<MushroomType[]>();
-
-  useEffect(() => {
-    onFetch(fetchMyAPI);
-  }, []);
-  useEffect(() => {
-    console.log('🚀 ~ file: index.tsx ~ line 14 ~ useEffect ~ data', result);
-  }, [result]);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -40,6 +16,12 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1>updated main page</h1>
+        <Image
+          src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVkcm9vbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&h=400&q=60"
+          alt="Image"
+          width={600}
+          height={400}
+        />
       </main>
 
       <footer className={styles.footer}>
@@ -48,10 +30,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Powered by <span className={styles.logo}></span>
         </a>
       </footer>
     </div>
