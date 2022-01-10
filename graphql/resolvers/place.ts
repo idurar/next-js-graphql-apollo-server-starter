@@ -8,9 +8,8 @@ const Query = {
     return places;
   },
 
-  place: (parent: any, args: any, ctx: any): schema.Query['place'] => {
-    const { id } = args;
-    return places[0];
+  place: (parent: any, args: any, ctx: any) => {
+    return places.find((x) => x.id == args.id);
   },
 };
 

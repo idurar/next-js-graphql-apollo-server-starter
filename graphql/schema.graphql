@@ -1,7 +1,6 @@
 type Place {
   id: ID
   owner: User
-  title: String
   desciption: String
   mainPhoto: String
   photos: [String]
@@ -11,7 +10,6 @@ type Place {
 
 input inputPlaceType {
   type: String
-  title: String
   desciption: String
   mainPhoto: String
   photos: [String]

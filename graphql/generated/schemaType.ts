@@ -43,7 +43,6 @@ export type Place = {
   photos?: Maybe<Array<Maybe<Scalars['String']>>>;
   priceByNight?: Maybe<Scalars['Float']>;
   reviews?: Maybe<Array<Maybe<Review>>>;
-  title?: Maybe<Scalars['String']>;
 };
 
 export type Query = {
@@ -92,7 +91,6 @@ export type InputPlaceType = {
   mainPhoto?: InputMaybe<Scalars['String']>;
   photos?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   priceByNight?: InputMaybe<Scalars['Float']>;
-  title?: InputMaybe<Scalars['String']>;
   type?: InputMaybe<Scalars['String']>;
 };
 

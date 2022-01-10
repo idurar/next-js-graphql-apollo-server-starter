@@ -1,9 +1,4 @@
-const mainPhoto =
-  'https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVkcm9vbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&h=400&q=60';
-
-const photos = [mainPhoto];
-
-export const users = [
+const users = [
   {
     id: '1',
     name: 'Salah Lalami',
@@ -24,8 +19,7 @@ export const users = [
     photo: 'https://pbs.twimg.com/profile_images/1444988463216922631/IDffhy4i_400x400.jpg',
   },
 ];
-
-export const reviews = [
+const reviews = [
   {
     id: '1',
     author: users[0],
@@ -49,15 +43,4 @@ export const reviews = [
   },
 ];
 
-export const places = [
-  {
-    id: '1',
-    owner: users[0],
-    type: 'appartment',
-    desciption: 'Cozy appatment with two bedrooms in central of London',
-    mainPhoto,
-    photos,
-    priceByNight: 89,
-    reviews,
-  },
-];
+console.log(reviews.filter((x) => x.author.id == '1'));
