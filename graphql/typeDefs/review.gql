@@ -3,7 +3,7 @@ type Review {
   author: User
   feedback: String
   rate: Float
-  propriety: Propriety
+  place: ID
 }
 
 type Query {
@@ -11,10 +11,10 @@ type Query {
 }
 
 input inputReviewType {
-  authorId: ID
+  id: ID
   feedback: String
   rate: Float
-  proprietyId: ID
+  place: ID
 }
 
 type Mutation {

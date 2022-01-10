@@ -1,15 +1,16 @@
 import { resolverType } from 'fast-graphql';
+import { reviews } from '@/data';
 
 const Query = {
-  reviewByUser: (id: any) => {
-    return { id: 'reviewByUser' };
-  }
+  reviewByUser: (parent: any, args: any, ctx: any) => {
+    return reviews.filter((x) => x.id == args.id);
+  },
 };
 
 const Mutation = {
-  addReview: (body: any) => {
+  addReview: (parent: any, args: any, ctx: any) => {
     return { name: 'this is addReview mutuation' };
-  }
+  },
 };
 
 const resolver: resolverType = { Query, Mutation };

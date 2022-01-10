@@ -1,8 +1,6 @@
-type Propriety {
+type Place {
   id: ID
   owner: User
-  type: String
-  title: String
   desciption: String
   mainPhoto: String
   photos: [String]
@@ -10,9 +8,8 @@ type Propriety {
   reviews: [Review]
 }
 
-input inputProprietyType {
+input inputPlaceType {
   type: String
-  title: String
   desciption: String
   mainPhoto: String
   photos: [String]
@@ -20,19 +17,19 @@ input inputProprietyType {
 }
 
 type Mutation {
-  addPropriety(body: inputProprietyType): Propriety
+  addPlace(body: inputPlaceType): Place
 }
 
 type Query {
-  proprietyList: [Propriety]
-  propriety(id: ID): Propriety
+  placeList: [Place]
+  place(id: ID): Place
 }
  type Review {
   id: ID
   author: User
   feedback: String
   rate: Float
-  propriety: Propriety
+  place: ID
 }
 
 type Query {
@@ -40,10 +37,10 @@ type Query {
 }
 
 input inputReviewType {
-  authorId: ID
+  id: ID
   feedback: String
   rate: Float
-  proprietyId: ID
+  place: ID
 }
 
 type Mutation {

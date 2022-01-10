@@ -1,23 +1,21 @@
 import { resolverType } from 'fast-graphql';
-
+import { users } from '@/data';
 import * as schemaType from '@/graphql/generated/schemaType';
 
 const Query = {
-  userList: (): schemaType.Query['userList'] => {
-    return [{ email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' }];
+  userList: (parent: any, args: any, ctx: any) => {
+    return users;
   },
 
-  user: (parent: any, args: any, ctx: any): schemaType.Query['user'] => {
-    const { id } = args;
-    console.log('🚀 ~ file: user.ts ~ line 17 ~ id', id);
-    return { email: 'Nextjs', id: 'sqdqsd', photo: 'qsdqsdqs' };
-  }
+  user: (parent: any, args: any, ctx: any) => {
+    return users.find((x) => x.id == args.id);
+  },
 };
 
 const Mutation = {
-  addUser: (body: any) => {
+  addUser: (parent: any, args: any, ctx: any) => {
     return { name: 'this is addUser mutuation' };
-  }
+  },
 };
 
 const resolver: resolverType = { Query, Mutation };
