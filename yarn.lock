@@ -2996,11 +2996,10 @@ fast-glob@^3.2.9:
     merge2 "^1.3.0"
     micromatch "^4.0.4"
 
-fast-graphql@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/fast-graphql/-/fast-graphql-1.1.0.tgz#72a3977ab543a43e0df209b3bfcaeb8229334b7e"
-  integrity sha512-gS6WLQjHsIhdwcK2bAVocRav9LfWlMGsgcQ0cMmuGsG4KbAFQDgQZbvKpIyWEVn3kEtTTHZzgY0uh4biUZyr9Q==
-
+fast-graphql@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/fast-graphql/-/fast-graphql-1.1.1.tgz#b20e04f73e869b580b9834171f26b11cf51da85b"
+  integrity sha512-aCCzabOWyGSmGTo1mNPxJAF8Mpqw6icIqkKSMJ5w0XGu0ZOK1QgIz/cthAZEshzsN0ptR/WSiIkgEa4ubGLa3w==
   dependencies:
     fast-glob "^3.2.7"
 
