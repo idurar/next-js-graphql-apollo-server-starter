@@ -1,27 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ApolloServer } from 'apollo-server-micro';
 
-import { createContext } from '@/graphql/context';
+import { createContext } from '@/backend/graphql/context';
 
-import typeDefs from '@/graphql/typeDefs';
-import resolvers from '@/graphql/resolvers';
+import typeDefs from '@/backend/graphql/typeDefs';
+import resolvers from '@/backend/graphql/resolvers';
 
 const apolloServer = new ApolloServer({
   typeDefs,
   resolvers,
-  context: createContext
+  context: createContext,
 });
 const startServer = apolloServer.start();
 
 export default async function graphqlServer({
   req,
   res,
-  serverConfig = {}
+  serverConfig = {},
 }: {
   req: NextApiRequest;
   res: NextApiResponse;
   serverConfig?: any;
-
 }) {
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -33,6 +32,6 @@ export default async function graphqlServer({
 
   await startServer;
   await apolloServer.createHandler({
-    path: '/api/graphql'
+    path: '/api/graphql',
   })(req, res);
 }

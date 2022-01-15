@@ -1,7 +1,7 @@
 import { resolverType } from 'fast-graphql';
-import { places } from '@/data';
+import { places } from '@/backend/data';
 
-import * as schema from '@/graphql/generated/schemaType';
+import * as schema from '@/backend/graphql/generated/schemaType';
 
 const Query = {
   placeList: (parent: any, args: any, ctx: any): schema.Query['placeList'] => {

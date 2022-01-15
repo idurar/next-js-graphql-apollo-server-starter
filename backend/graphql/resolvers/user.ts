@@ -1,6 +1,6 @@
 import { resolverType } from 'fast-graphql';
-import { users } from '@/data';
-import * as schemaType from '@/graphql/generated/schemaType';
+import { users } from '@/backend/data';
+import * as schemaType from '@/backend/graphql/generated/schemaType';
 
 const Query = {
   userList: (parent: any, args: any, ctx: any) => {

@@ -1,7 +1,7 @@
 {
-  "name": "next-js-graphql-starter",
+  "name": "graphql-mongoose-next-js-airbnb-clone",
   "private": false,
-  "description": "Starter Next.js with appollo server auto generetated schemq",
+  "description": "Starter MongoDB  Next.js with appollo server auto generetated schemq",
   "keywords": [
     "graphql,tools,schema,merge,combine,resolvers,fast,simple,starter,nextjs,typescript"
   ],
@@ -22,11 +22,13 @@
     "fast-graphql": "^1.1.1",
     "graphql": "^16.1.0",
     "micro": "^9.3.4",
+    "mongoose": "^6.1.6",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.11.97",
     "@types/node": "16.11.7",
     "@types/react": "17.0.35",
     "eslint": "7.32.0",

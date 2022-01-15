@@ -1,10 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import graphqlServer from '@/graphql/server';
+import connectToDatabase from '@/backend/database/connectToDatabase';
+import graphqlServer from '@/backend/graphql/server';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<any>
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
+  await connectToDatabase();
   await graphqlServer({ req, res });
 }
 
