@@ -1,5 +1,5 @@
 import { resolverType } from 'fast-graphql';
-import { reviews } from '@/data';
+import { reviews } from '@/backend/data';
 
 const Query = {
   reviewByUser: (parent: any, args: any, ctx: any) => {
