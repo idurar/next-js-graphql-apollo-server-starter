@@ -1,7 +1,7 @@
-
 const { generateSchema } = require('fast-graphql');
 
 const inputPath = './graphql/typeDefs/*.gql';
-const outPath = './graphql/schema.graphql';
+const schemaPath = './graphql/schema.graphql';
+const typeDefsPath = './graphql/typeDefs/index.ts';
 
-generateSchema({ inputPath, outPath });
+generateSchema({ inputPath, schemaPath, typeDefsPath });

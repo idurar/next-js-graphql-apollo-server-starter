@@ -3,8 +3,7 @@ import { ApolloServer } from 'apollo-server-micro';
 
 import { createContext } from '@/graphql/context';
 
-// import typeDefs from '@/graphql/typeDefs';
-import typeDefs from '@/graphql/schema';
+import typeDefs from '@/graphql/typeDefs';
 import resolvers from '@/graphql/resolvers';
 
 const apolloServer = new ApolloServer({
