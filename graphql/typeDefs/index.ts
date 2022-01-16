@@ -1,10 +1,69 @@
-import { mergeSchemas } from 'fast-graphql';
-const path = require('path');
-// import { loadFilesSync } from '@graphql-tools/load-files';
+export default `type Place {
+  id: ID
+  owner: User
+  desciption: String
+  mainPhoto: String
+  photos: [String]
+  priceByNight: Float
+  reviews: [Review]
+}
 
-const pathfiles = 'graphql/typeDefs/*.gql';
-console.log('🚀 ~ file: index.ts ~ line 6 ~ pathfiles', pathfiles);
+input inputPlaceType {
+  type: String
+  desciption: String
+  mainPhoto: String
+  photos: [String]
+  priceByNight: Float
+}
 
-const mergedSchemas = mergeSchemas({ pathfiles });
+type Mutation {
+  addPlace(body: inputPlaceType): Place
+}
 
-export default mergedSchemas;
+type Query {
+  placeList: [Place]
+  place(id: ID): Place
+}
+ type Review {
+  id: ID
+  author: User
+  feedback: String
+  rate: Float
+  place: ID
+}
+
+type Query {
+  reviewByUser(id: ID): [Review]
+}
+
+input inputReviewType {
+  id: ID
+  feedback: String
+  rate: Float
+  place: ID
+}
+
+type Mutation {
+  addReview(body: inputReviewType): Review
+}
+ type User {
+  id: ID!
+  name: String
+  email: String!
+  photo: String!
+}
+
+input inputUserType {
+  name: String!
+  email: String!
+}
+
+type Query {
+  userList: [User!]!
+  user(id: ID!): User!
+}
+
+type Mutation {
+  addUser(body: inputUserType): User!
+}
+`;
