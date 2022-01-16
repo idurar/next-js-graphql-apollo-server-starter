@@ -2,6 +2,11 @@
 
 Next.js Graphql apollo server starter , with merge schema , combine resolvers generate type in fast and simple way
 
+
+```
+Don't forget please to ⭐ this repo
+```
+
 ## Install
 
 ```
